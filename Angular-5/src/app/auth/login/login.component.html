@@ -1,0 +1,9 @@
+<div>
+  <button (click)='loginwithgoogle()'>login with google</button>
+</div>
+<p></p>
+<div>
+  <input type="text" placeholder="email" [(ngModel)]="auth.email"/>
+  <input type="text" placeholder="password" [(ngModel)]="auth.password"/>
+  <button (click)="loginwithemail()">login</button>
+</div>

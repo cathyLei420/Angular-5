@@ -1,0 +1,27 @@
+
+<p>Data from database : {{info}}</p>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Location</th>
+    <th>Company</th>
+    <th>Phone</th>
+  </tr>
+  <tr *ngFor = 'let user of users'>
+      <th>{{user.username}}</th>
+      <th>{{user.location}}</th>
+      <th>{{user.company}}</th>
+      <th>{{user.phone}}</th>
+    </tr>
+</table>
+<p *ngFor="let user of user_snapshot">
+  {{user.key}}<br/>
+  {{user.payload.val().username}}
+  {{user.payload.val().location}}
+  {{user.payload.val().phone}}
+  {{user.payload.val().company}}
+</p>
+<p *ngFor="let user of user_observables | async">
+  {{user.username}}, {{user.company}}
+</p>

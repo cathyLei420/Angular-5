@@ -1,0 +1,6 @@
+<div>
+  <a href="#" [routerLink] = "['/home']" *ngIf ="!toggle">Home</a>
+  <a href="#" [routerLink] = "['/login']" *ngIf ="toggle">Login</a>
+  <a href="#" [routerLink] = "['/registration']" *ngIf ="toggle" >Registration</a>
+  <a (click)="logout()">Logout</a>
+</div>
